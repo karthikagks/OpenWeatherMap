@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Jars/Cucumber/apiguardian-api-1.1.2.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/ci-environment-8.1.0.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cobertura-2.1.1.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cucumber-core-7.2.3.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cucumber-expressions-15.0.1.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cucumber-gherkin-7.2.3.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cucumber-gherkin-messages-7.2.3.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cucumber-java-7.2.3.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cucumber-junit-7.2.3.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cucumber-junit-platform-engine-7.2.3.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cucumber-jvm-deps-1.0.5.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cucumber-plugin-7.2.3.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/cucumber-reporting-5.6.1.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/datatable-7.2.3.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/docstring-7.2.3.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/gherkin-22.0.0.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/html-formatter-17.0.0.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/junit-4.13.2.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/messages-17.1.1.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/mockito-all-2.0.2-beta.jar"/>
+	<classpathentry kind="lib" path="Jars/Cucumber/tag-expressions-4.1.0.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/commons-lang3-3.11.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/groovy-3.0.9.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/groovy-json-3.0.9.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/groovy-xml-3.0.9.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/hamcrest-2.1.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/httpclient-4.5.13.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/httpcore-4.4.13.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/httpmime-4.5.13.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/json-path-4.5.0.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/rest-assured-4.5.0.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/rest-assured-common-4.5.0.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/tagsoup-1.2.1.jar"/>
+	<classpathentry kind="lib" path="Jars/RestAssured/xml-path-4.5.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
