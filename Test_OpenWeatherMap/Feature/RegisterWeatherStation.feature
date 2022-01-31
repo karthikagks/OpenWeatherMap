@@ -27,7 +27,8 @@ Feature: Register Weather station
     
   @tag2
   Scenario: Register weather station with an API Key
-    Given Attempt to register a First station with an API key
+    Given Make sure stations are not registered already in DB.
+    And Attempt to register a First station with an API key
     Then Verify that http response code for an attempt to register a station with API key is success.
     Given Attempt to register a Second station with an API key
     Then Verify that http response code for an attempt to register a station with API key is success.

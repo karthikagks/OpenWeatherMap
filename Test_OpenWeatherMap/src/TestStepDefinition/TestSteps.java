@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
@@ -64,8 +65,43 @@ public class TestSteps {
 		
 		assertEquals(Exp_StatusMessage, Act_StatusMessage);
 	}
+	@Given("Make sure stations are not registered already in DB.")
+	public void make_sure_stations_are_not_registered_already_in_db() {
+		
+//		List the stations stored in DB.
+		RestAssured.baseURI = "http://api.openweathermap.org/data/3.0/stations";
+		RequestSpecification httpRequest = RestAssured.given();
+		Response response = httpRequest.queryParam("appid", "c5cc962ef5eb8a2d232894b5256b4f6a").get();
+		System.out.println("Status code: " + response.getStatusCode());
+		String message = response.body().asString();
+		System.out.println("Status message " +message);
+		
+//		Read the status message from API response
+		int count =0;
+		JsonPath S_message = response.body().jsonPath();
+		String Act_StatusMessage = S_message.get("[0].id");
+		while (!Act_StatusMessage.equals(null))
+		{			
+			Act_StatusMessage = S_message.get("["+count+"].id");
+			System.out.println("Actual Status message: " + Act_StatusMessage);
+			
+			if(Act_StatusMessage==null)
+			{
+				System.out.println("Duplicate stations are deleted");
+				break;
+			}
+//			Delete the duplicate stations
+			RestAssured.baseURI = "http://api.openweathermap.org/data/3.0/stations/";
+			RequestSpecification DeleteRequest = RestAssured.given();
+			Response D_response = DeleteRequest.queryParam("appid", "c5cc962ef5eb8a2d232894b5256b4f6a").delete(Act_StatusMessage);
+			System.out.println("Status code: " + D_response.getStatusCode());
+			
+			count++;
+		}
+		
+	}
 	
-	@Given("Attempt to register a First station with an API key")
+	@And("Attempt to register a First station with an API key")
 	public void attempt_to_register_a_first_station_with_an_api_key() {
 		RestAssured.baseURI = "http://api.openweathermap.org/data/3.0/stations";
 
@@ -164,6 +200,14 @@ public class TestSteps {
 			
 			count++;
 		}
+
+
+
+
+	
+
+
+
 		
 	
 	}
